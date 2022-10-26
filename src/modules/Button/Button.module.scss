@@ -1,0 +1,29 @@
+@import "src/styles/themes/colors";
+@import "src/styles/themes/fonts";
+
+.button {
+  height: 70px;
+  width: 217px;
+  background-color: $blue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &_container {
+    padding: 19px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__icon {
+      height: 32px;
+      width: 32px;
+      fill: $white;
+    }
+
+    &__heading {
+      font: 700 26px $primaryFont;
+      color: $white;
+    }
+  }
+}

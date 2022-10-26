@@ -1,0 +1,54 @@
+@import "src/styles/themes/fonts";
+@import "src/styles/themes/colors";
+
+.container {
+  display: flex;
+  min-width: 300px;
+  justify-content: start;
+
+  &_topic {
+    padding: 24px 32px;
+
+    &__heading {
+      font: 700 20px $primaryFont;
+      color: $black;
+    }
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 32px;
+    gap: 40px;
+
+    &__list {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      list-style: none;
+    }
+
+    &__link {
+      text-decoration: none;
+      font: 600 20px $primaryFont;
+      color: $black;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 200px;
+      gap: 16px;
+      height: 100%;
+      justify-content: start;
+
+      &_icon {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

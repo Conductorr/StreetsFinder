@@ -1,0 +1,44 @@
+@import "src/styles/themes/fonts";
+@import "src/styles/themes/colors";
+
+.container {
+  margin-top: 32px;
+  height: 100%;
+  width: 100%;
+
+  &__heading {
+    font: 700 26px/32px $primaryFont;
+    color: $black;
+  }
+
+  &__update {
+    display: flex;
+    font: 500 20px $primaryFont;
+    margin-top: 16px;
+    color: $black;
+  }
+
+  &_main {
+    max-height: 660px;
+    overflow-y: scroll;
+  }
+}
+
+.test {
+  font: 500 20px $primaryFont;
+  display: flex;
+  color: $commonBlack;
+  margin-top: 24px;
+}
+
+::-webkit-scrollbar {
+  color: red;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  color: $blue;
+  background-color: $blue;
+}
+::-webkit-scrollbar-track {
+  height: 127px;
+}

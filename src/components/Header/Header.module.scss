@@ -1,0 +1,50 @@
+@import "./src/styles/themes/fonts";
+@import "./src/styles/themes/colors";
+
+.container {
+  min-width: 1440px;
+  height: 80px;
+  background-color: $blue;
+  display: flex;
+
+  &_content {
+    padding: 28px 32px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    &_logo {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      &__icon {
+        height: 48px;
+        width: 48px;
+        fill: $white;
+      }
+
+      &__heading {
+        font: 700 20px $primaryFont;
+        color: $white;
+      }
+    }
+
+    &_user {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      &__icon {
+        height: 48px;
+        width: 48px;
+      }
+
+      &__heading {
+        font: 700 20px $primaryFont;
+        color: $white;
+      }
+    }
+  }
+}

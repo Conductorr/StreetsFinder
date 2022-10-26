@@ -1,0 +1,13 @@
+export { wrench } from "./wrench";
+export { person } from "./person";
+export { home } from "./home";
+export { search } from "./search";
+export { table } from "./table";
+export { calendar } from "./calendar";
+export { map } from "./map";
+export { widget } from "./widget";
+export { settings } from "./settings";
+export { profile } from "./profile";
+export { finance } from "./finance";
+export { exit } from "./exit";
+export { subArrow } from "./subArrow";

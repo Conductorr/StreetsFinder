@@ -1,0 +1,22 @@
+@import "src/styles/themes/fonts";
+@import "src/styles/themes/colors";
+
+.container {
+  margin-top: 56px;
+  height: 56px;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+
+  &_header {
+    &__heading {
+      font: 700 26px $primaryFont;
+      color: $commonBlack;
+    }
+  }
+
+  &_content {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,20 @@
+@import "src/styles/themes/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 1440px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.News {
+  display: flex;
+}

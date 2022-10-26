@@ -1,0 +1,22 @@
+@import "src/styles/themes/fonts";
+@import "src/styles/themes/colors";
+
+.container_header__heading {
+  margin-top: 32px;
+  font: 700 26px $primaryFont;
+  color: $black;
+}
+
+.container_header__description {
+  display: flex;
+  font: 500 20px $primaryFont;
+  color: $black;
+  margin-top: 16px;
+}
+
+.container__search {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
