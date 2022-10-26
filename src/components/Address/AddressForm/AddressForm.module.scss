@@ -3,9 +3,8 @@
 
 .container {
   margin-top: 56px;
-  height: 56px;
+  height: 40px;
   width: 100%;
-  background-color: grey;
   display: flex;
 
   &_header {
@@ -19,4 +18,9 @@
     display: flex;
     align-items: center;
   }
+}
+
+.testst {
+  overflow-y: hidden;
+  max-height: 100px;
 }

@@ -1,38 +1,29 @@
-import React, { useCallback, useEffect, useState } from "react";
-import styles from "./Address.module.scss";
-import useSwr from "swr";
+import React, { useCallback, useEffect, useState, memo } from "react";
 import { Button, Input } from "modules";
-import { fetchAddress } from "api/fetch";
-import button from "../../modules/Button";
+import { fetchAddress } from "api/fetcher";
 import AddressForm from "./AddressForm";
+import { Adresses } from "core/types/Adresses";
+import styles from "./Address.module.scss";
 
 function Address() {
-  const [address, setAddress] = useState([]);
-  const [value, setValue] = useState("");
-
-  const query = "ленина";
-
-  // const click = async () => {
-  //   const response = await fetch(
-  //     "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address",
-  //     {
-  //       method: "POST",
-  //       body: JSON.stringify({ query: query }),
-  //       headers: {
-  //         "Content-type": "application/json; charset=UTF-8",
-  //         Accept: "application/json",
-  //         Authorization: "Token " + "673337e7ab9699431aeec125e0e9dea23b7e8175",
-  //       },
-  //     }
-  //   );
-  //
-  //   setAddress(result);
-  // };
+  const [address, setAddress] = useState<Adresses[]>([]);
+  const [value, setValue] = useState<string>("");
 
   const handleClickButton = useCallback(async () => {
-    const response = await fetchAddress();
-    return setAddress([...response]);
-  }, []);
+    const response = await fetchAddress(value);
+    if (response.suggestions) {
+      setAddress(response.suggestions);
+    }
+  }, [value, setAddress]);
+
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (e.target.value) {
+        setValue(e.target.value);
+      }
+    },
+    [setValue]
+  );
 
   console.log(address);
 
@@ -45,7 +36,7 @@ function Address() {
         </span>
       </div>
       <div className={styles.container__search}>
-        <Input value={value} />
+        <Input onChange={handleChange} value={value} />
         <Button onClick={handleClickButton} />
       </div>
       <div>
@@ -57,4 +48,4 @@ function Address() {
   );
 }
 
-export default Address;
+export default memo(Address);

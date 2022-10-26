@@ -1,10 +1,10 @@
-export async function fetchAddress() {
+export async function fetchAddress(query: string) {
   try {
     const response = await fetch(
       "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address",
       {
         method: "POST",
-        body: JSON.stringify({ query: "москва" }),
+        body: JSON.stringify({ query }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
           Accept: "application/json",
