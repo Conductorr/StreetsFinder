@@ -1,4 +1,6 @@
 @import "src/styles/themes/fonts";
+@import "src/styles/themes/colors";
+@import "src/styles/themes/media";
 
 * {
   margin: 0;
@@ -13,8 +15,38 @@
   width: 1440px;
   margin: 0 auto;
   justify-content: center;
+
+  @include mediaMaxWidth(1440px) {
+    width: 100%;
+  }
 }
 
 .News {
   display: flex;
+}
+
+.border {
+  height: 25px;
+  width: 5px;
+  background-color: $blue;
+  border: none;
+  position: absolute;
+  transform: translate(17rem, 5.2rem);
+
+  @include mediaMaxWidth(768px) {
+    display: none;
+  }
+}
+
+.border-address {
+  height: 25px;
+  width: 5px;
+  background-color: $blue;
+  border: none;
+  position: absolute;
+  transform: translate(17rem, 9.5rem);
+
+  @include mediaMaxWidth(768px) {
+    display: none;
+  }
 }

@@ -1,10 +1,15 @@
 @import "src/styles/themes/fonts";
 @import "src/styles/themes/colors";
+@import "src/styles/themes/media";
 
 .container {
   display: flex;
   min-width: 300px;
   justify-content: start;
+
+  @include mediaMaxWidth(768px) {
+    display: none;
+  }
 
   &_topic {
     padding: 24px 32px;
@@ -51,4 +56,10 @@
       }
     }
   }
+}
+
+.test {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
 }

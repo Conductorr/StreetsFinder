@@ -15,6 +15,7 @@ function App() {
               <div style={{ display: "flex" }}>
                 <Sidebar />
                 <News />
+                <div className="border"></div>
               </div>
             }
           />
@@ -24,6 +25,7 @@ function App() {
               <div style={{ display: "flex" }}>
                 <Sidebar />
                 <Address />
+                <div className="border-address"></div>
               </div>
             }
           />

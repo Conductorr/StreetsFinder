@@ -49,7 +49,7 @@ const SidebarData: SidebarItem[] = [
     path: "/",
     icon: settings,
     iconOpened: subArrow,
-    subnav: [
+    submenu: [
       {
         title: "Настройки профиля",
         path: "/",

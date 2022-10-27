@@ -1,10 +1,15 @@
 @import "src/styles/themes/fonts";
 @import "src/styles/themes/colors";
+@import "src/styles/themes/media";
 
 .container_header__heading {
   margin-top: 32px;
   font: 700 26px $primaryFont;
   color: $black;
+
+  @include mediaMaxWidth(1380px) {
+    width: 100%;
+  }
 }
 
 .container_header__description {
@@ -14,9 +19,40 @@
   margin-top: 16px;
 }
 
+.container_header {
+  width: 100%;
+}
+
 .container__search {
   display: flex;
   align-items: center;
   gap: 24px;
   margin-top: 24px;
+  width: 100%;
+
+  @include mediaMaxWidth(1380px) {
+    width: 100%;
+  }
+}
+
+.address {
+  font: 700 26px $primaryFont;
+  color: $commonBlack;
+  margin: 26px 0 0 24px;
+}
+
+.search__result {
+  max-height: 500px;
+  overflow-y: scroll;
+  margin-left: 24px;
+}
+
+.testing {
+  @include mediaMaxWidth(1380px) {
+    width: 100%;
+  }
+}
+
+.input {
+  width: 100%;
 }

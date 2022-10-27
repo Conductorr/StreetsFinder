@@ -8,7 +8,7 @@ type Props = {
   onClick?: () => void;
 };
 
-function Button({ className, onClick }: Props) {
+function Button({ onClick }: Props) {
   return (
     <button onClick={onClick} className={styles.button}>
       <div className={styles.button_container}>

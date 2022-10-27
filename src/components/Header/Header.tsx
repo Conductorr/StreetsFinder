@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Header.module.scss";
 import Icon from "modules/Icon";
 import { wrench, person } from "assets/svg";
+import styles from "./Header.module.scss";
 
 function Header() {
   return (

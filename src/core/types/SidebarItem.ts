@@ -3,6 +3,5 @@ export interface SidebarItem {
   path: string;
   icon: any;
   iconOpened?: any;
-  iconClosed?: any;
-  subnav?: SidebarItem[];
+  submenu?: SidebarItem[];
 }

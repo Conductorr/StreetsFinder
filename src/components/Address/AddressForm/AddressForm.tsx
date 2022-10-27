@@ -9,7 +9,7 @@ function AddressForm({ value }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}></div>
-      <div className={styles.testst}>
+      <div className={styles.result}>
         <div className={styles.container_content}>
           <h1 className={styles.container_content__heading}>{value}</h1>
         </div>

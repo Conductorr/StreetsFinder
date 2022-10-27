@@ -2,11 +2,10 @@ import React, { useCallback, useEffect, useState, memo } from "react";
 import { Button, Input } from "modules";
 import { fetchAddress } from "api/fetcher";
 import AddressForm from "./AddressForm";
-import { Adresses } from "core/types/Adresses";
 import styles from "./Address.module.scss";
 
 function Address() {
-  const [address, setAddress] = useState<Adresses[]>([]);
+  const [address, setAddress] = useState([]);
   const [value, setValue] = useState<string>("");
 
   const handleClickButton = useCallback(async () => {
@@ -18,7 +17,7 @@ function Address() {
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (e.target.value) {
+      if (e.target.value.length >= 3) {
         setValue(e.target.value);
       }
     },
@@ -28,21 +27,30 @@ function Address() {
   console.log(address);
 
   return (
-    <div style={styles.container}>
+    <div className={styles.testing}>
       <div className={styles.container_header}>
-        <h1 className={styles.container_header__heading}>Поиск Адрессов</h1>
+        <h1 className={styles.container_header__heading}>Поиск адресов</h1>
         <span className={styles.container_header__description}>
           Введите интересующий вас адрес
         </span>
       </div>
       <div className={styles.container__search}>
-        <Input onChange={handleChange} value={value} />
+        <Input className={styles.input} onChange={handleChange} value={value} />
         <Button onClick={handleClickButton} />
       </div>
       <div>
-        {address.map((item) => (
-          <AddressForm key={item.value} value={item.value} />
-        ))}
+        {address.length > 0 ? (
+          <div>
+            <h1 className={styles.address}>Адреса</h1>
+          </div>
+        ) : null}
+      </div>
+      <div className={styles.search__result}>
+        <div>
+          {address.map((item) => (
+            <AddressForm key={item.value} value={item.value} />
+          ))}
+        </div>
       </div>
     </div>
   );

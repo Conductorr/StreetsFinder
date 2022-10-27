@@ -26,7 +26,6 @@
 
 .test {
   font: 500 20px $primaryFont;
-  display: flex;
   color: $commonBlack;
   margin-top: 24px;
 }
@@ -35,10 +34,12 @@
   color: red;
   width: 6px;
 }
+
 ::-webkit-scrollbar-thumb {
   color: $blue;
   background-color: $blue;
 }
+
 ::-webkit-scrollbar-track {
   height: 127px;
 }

@@ -7,6 +7,7 @@ type Props = {
   tabIndex?: number;
   title?: string;
   viewBox: string;
+  onClick?: () => void;
 };
 
 const Icon = forwardRef<SVGSVGElement, Props>(function Icon(props, ref) {

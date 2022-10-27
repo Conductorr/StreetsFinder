@@ -7,7 +7,7 @@ type Props = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-function Input({ className, value, onChange }: Props) {
+function Input({ onChange }: Props) {
   return (
     <input
       style={{ font: "500 26px" }}
