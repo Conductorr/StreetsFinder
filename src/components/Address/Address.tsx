@@ -24,8 +24,6 @@ function Address() {
     [setValue]
   );
 
-  console.log(address);
-
   return (
     <div className={styles.testing}>
       <div className={styles.container_header}>
