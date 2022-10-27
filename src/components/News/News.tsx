@@ -54,6 +54,8 @@ function News() {
           Задача организации, в особенности же перспективное планирование, а
           также свежий взгляд на привычные вещи - безусловно открывает для&nbsp;
           <a
+            rel="noreferrer"
+            target="_blank"
             id="text"
             href="https://www.figma.com/exit?url=http%3A%2F%2Fgoogle.com"
           >
